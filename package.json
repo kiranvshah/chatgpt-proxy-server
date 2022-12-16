@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "build/index.js",
+	"engines": {
+		"node": ">=18.0.0"
+	},
 	"scripts": {
 		"build": "tsc",
 		"prettier:check": "prettier --check .",
