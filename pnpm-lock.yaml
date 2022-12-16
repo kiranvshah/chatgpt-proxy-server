@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^18.11.16
   chatgpt: ^2.5.0
+  dotenv: ^16.0.3
   prettier: ^2.8.1
   puppeteer: ^19.4.1
   typescript: ^4.9.4
 
 dependencies:
   chatgpt: 2.5.0_puppeteer@19.4.1
+  dotenv: 16.0.3
   puppeteer: 19.4.1
 
 devDependencies:
@@ -263,6 +265,11 @@ packages:
   /diff/5.1.0:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
     engines: {node: '>=0.3.1'}
+    dev: false
+
+  /dotenv/16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
     dev: false
 
   /end-of-stream/1.4.4:
