@@ -1,19 +1,55 @@
 # ChatGPT Proxy Server
 
-Uses [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) in order to query ChatGPT with a POST request. Useful in environments where Node 18.x cannot be used (e.g. when creating VS Code extensions).
+This README was written by ChatGPT.
 
-## Usage
+This repository contains the code to run a server that can host the ChatGPT API. The ChatGPT API allows you to send a query to ChatGPT and receive a response. It is useful in environments where Node 18.x cannot be used, such as when creating VS Code extensions. The API uses the [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) library.
 
-1. Add `OPENAI_EMAIL` and `OPENAI_PASSWORD` to `.env`.
-2. Run program
-3. Query by sending a post request to port 3000 at `/askchatgpt` with the following body:
+## ChatGPT API
+
+### Endpoint
+
+`POST /askchatgpt`
+
+### Parameters
+
+- `query`: a string representing the query to send to ChatGPT.
+
+### Response
+
+The API will return a JSON object with the following structure:
 
 ```json
 {
-	"query": "Explain how to find if a number is prime in python. Include a sample program."
+	"response": "string"
 }
 ```
 
-## Limitations
+The `response` field contains the response from ChatGPT as a string, with line breaks represented by `\\n`.
 
-ChatGPT needs captchas to be solved, so this cannot run fully automatically. If you have a [2captcha](https://2captcha.com/) account, you could add the parameter `captchaToken` to the `ChatGPTAPIBrowser` options, although the 2captcha API is not free.
+### Example
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"query": "How can I check if a number is prime in Python?"}' localhost:3000/askchatgpt
+```
+
+This request will send the query "How can I check if a number is prime in Python?" to ChatGPT and receive a response.
+
+```json
+{
+	"response": "To check if a number is prime in Python, you can use the following code:\n\ndef is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n ** 0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+}
+```
+
+### Requirements
+
+To use this API, you will need to have an account with OpenAI and set the `OPENAI_EMAIL` and `OPENAI_PASSWORD` environment variables in a '.env' file. You will also need to install the required dependencies by running `pnpm install`.
+
+### Usage
+
+1. Create a '.env' file in the root directory of your project and set the `OPENAI_EMAIL` and `OPENAI_PASSWORD` environment variables.
+2. Run `pnpm install` to install the required dependencies.
+3. Start the server by running `pnpm start`.
+
+### Limitations
+
+ChatGPT requires captchas to be solved, so this cannot run fully automatically. If you have a [2captcha](https://2captcha.com/) account, you could add the parameter `captchaToken` to the `ChatGPTAPIBrowser` options, although the 2captcha API is not free.
