@@ -28,7 +28,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 18.x
-          cache: pnpm
 
       - name: Install npm dependencies
         run: pnpm install
