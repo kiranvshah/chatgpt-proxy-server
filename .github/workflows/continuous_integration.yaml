@@ -12,6 +12,8 @@ jobs:
     defaults:
       run:
         shell: bash
+    matrix:
+      os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - name: Check out repo
         uses: actions/checkout@v3
