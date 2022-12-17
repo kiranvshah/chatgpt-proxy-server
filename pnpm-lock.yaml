@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/express': ^4.17.15
   '@types/node': ^18.11.16
-  chatgpt: ^2.5.0
+  chatgpt: ^3.0.0
   dotenv: ^16.0.3
   express: ^4.18.2
   prettier: ^2.8.1
@@ -11,7 +11,7 @@ specifiers:
   typescript: ^4.9.4
 
 dependencies:
-  chatgpt: 2.5.0_puppeteer@19.4.1
+  chatgpt: 3.0.0_puppeteer@19.4.1
   dotenv: 16.0.3
   express: 4.18.2
   puppeteer: 19.4.1
@@ -250,8 +250,8 @@ packages:
     resolution: {integrity: sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==}
     dev: false
 
-  /chatgpt/2.5.0_puppeteer@19.4.1:
-    resolution: {integrity: sha512-PHQPE0IO0s8Q94+rSP5K2OjrSLxHkwunGDEMXLxAa0F+e6fhleDWR9msQnC9hZmSqM5yhwzqXQye2UBlUBITrQ==}
+  /chatgpt/3.0.0_puppeteer@19.4.1:
+    resolution: {integrity: sha512-XtlIKMiJvhJj2ds6H5E96gIgHNZOPqWlt257TvmYETBdU0riq8oFckl9ms6s0hgGhrVapTv4NF5p87bNzMioyA==}
     engines: {node: '>=18'}
     peerDependencies:
       puppeteer: '*'

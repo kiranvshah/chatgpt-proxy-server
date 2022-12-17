@@ -12,13 +12,13 @@ const queryChatgpt = async (query: string) => {
 		email: process.env.OPENAI_EMAIL as string,
 		password: process.env.OPENAI_PASSWORD as string,
 	})
-	await chatgptApi.init()
+	await chatgptApi.initSession()
 	return await chatgptApi.sendMessage(query)
 }
 
 app.post("/askchatgpt", async (req, res) => {
 	const query = req.body.query
-	const response = await queryChatgpt(query)
+	const response = (await queryChatgpt(query)).response
 	res.json(response)
 })
 
