@@ -16,10 +16,11 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Set EOL character
+        run: git config core.eol lf
+
       - name: Check out repo
         uses: actions/checkout@v3
-        with:
-          eol: lf
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
