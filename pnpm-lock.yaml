@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/express': ^4.17.15
   '@types/node': ^18.11.16
-  chatgpt: ^3.0.0
+  chatgpt: ^3.2.4
   dotenv: ^16.0.3
   express: ^4.18.2
   prettier: ^2.8.1
@@ -11,7 +11,7 @@ specifiers:
   typescript: ^4.9.4
 
 dependencies:
-  chatgpt: 3.0.0_puppeteer@19.4.1
+  chatgpt: 3.2.4_puppeteer@19.4.1
   dotenv: 16.0.3
   express: 4.18.2
   puppeteer: 19.4.1
@@ -43,6 +43,26 @@ packages:
       '@babel/helper-validator-identifier': 7.19.1
       chalk: 2.4.2
       js-tokens: 4.0.0
+    dev: false
+
+  /@fisch0920/puppeteer-extra-plugin-recaptcha/3.6.6_puppeteer-extra@3.3.4:
+    resolution: {integrity: sha512-KI12BbqOupDm8+R21IS645L9/SzdYMVvMFdvGy2zIePJ5qPYNcqUIqBSA86hdk0vM2WJ1G5q1t7AUQoemGwbeQ==}
+    engines: {node: '>=9.11.2'}
+    peerDependencies:
+      playwright-extra: '*'
+      puppeteer-extra: '*'
+    peerDependenciesMeta:
+      playwright-extra:
+        optional: true
+      puppeteer-extra:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+      merge-deep: 3.0.3
+      puppeteer-extra: 3.3.4_puppeteer@19.4.1
+      puppeteer-extra-plugin: 3.2.2_puppeteer-extra@3.3.4
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@types/body-parser/1.19.2:
@@ -250,8 +270,8 @@ packages:
     resolution: {integrity: sha512-shx7oQ0Awen/BRIdkjkvz54PnEEI/EjwXDSIZp86/KKdbafHh1Df/RYGBhn4hbe2+uKC9FnT5UCEdyPz3ai9hQ==}
     dev: false
 
-  /chatgpt/3.0.0_puppeteer@19.4.1:
-    resolution: {integrity: sha512-XtlIKMiJvhJj2ds6H5E96gIgHNZOPqWlt257TvmYETBdU0riq8oFckl9ms6s0hgGhrVapTv4NF5p87bNzMioyA==}
+  /chatgpt/3.2.4_puppeteer@19.4.1:
+    resolution: {integrity: sha512-tP8RUUH+Jl0lCFf08lOcFsgnrli1DMNZF76Zc6nIbPXDS0iHwVUI0n90qlIic6RTAMD0KPGahF/yaLrB/T/hOQ==}
     engines: {node: '>=18'}
     peerDependencies:
       puppeteer: '*'
@@ -263,8 +283,9 @@ packages:
       p-timeout: 6.0.0
       puppeteer: 19.4.1
       puppeteer-extra: 3.3.4_puppeteer@19.4.1
-      puppeteer-extra-plugin-recaptcha: 3.6.6_puppeteer-extra@3.3.4
+      puppeteer-extra-plugin-recaptcha: /@fisch0920/puppeteer-extra-plugin-recaptcha/3.6.6_puppeteer-extra@3.3.4
       puppeteer-extra-plugin-stealth: 2.11.1_puppeteer-extra@3.3.4
+      random: 4.1.0
       remark: 14.0.2
       strip-markdown: 5.0.0
       uuid: 9.0.0
@@ -1215,26 +1236,6 @@ packages:
       - utf-8-validate
     dev: false
 
-  /puppeteer-extra-plugin-recaptcha/3.6.6_puppeteer-extra@3.3.4:
-    resolution: {integrity: sha512-SVbmL+igGX8m0Qg9dn85trWDghbfUCTG/QUHYscYx5XgMZVVb0/v0a6MqbPdHoKmBx5BS2kLd6rorMlncMcXdw==}
-    engines: {node: '>=9.11.2'}
-    peerDependencies:
-      playwright-extra: '*'
-      puppeteer-extra: '*'
-    peerDependenciesMeta:
-      playwright-extra:
-        optional: true
-      puppeteer-extra:
-        optional: true
-    dependencies:
-      debug: 4.3.4
-      merge-deep: 3.0.3
-      puppeteer-extra: 3.3.4_puppeteer@19.4.1
-      puppeteer-extra-plugin: 3.2.2_puppeteer-extra@3.3.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
   /puppeteer-extra-plugin-stealth/2.11.1_puppeteer-extra@3.3.4:
     resolution: {integrity: sha512-n0wdC0Ilc9tk5L6FWLyd0P2gT8b2fp+2NuB+KB0oTSw3wXaZ0D6WNakjJsayJ4waGzIJFCUHkmK9zgx5NKMoFw==}
     engines: {node: '>=8'}
@@ -1364,6 +1365,13 @@ packages:
       side-channel: 1.0.4
     dev: false
 
+  /random/4.1.0:
+    resolution: {integrity: sha512-6Ajb7XmMSE9EFAMGC3kg9mvE7fGlBip25mYYuSMzw/uUSrmGilvZo2qwX3RnTRjwXkwkS+4swse9otZ92VjAtQ==}
+    engines: {node: '>=14'}
+    dependencies:
+      seedrandom: 3.0.5
+    dev: false
+
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -1442,6 +1450,10 @@ packages:
 
   /safer-buffer/2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: false
+
+  /seedrandom/3.0.5:
+    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
     dev: false
 
   /send/0.18.0:
