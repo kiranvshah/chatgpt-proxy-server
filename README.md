@@ -1,5 +1,7 @@
 # ChatGPT Proxy Server
 
+[![Continuous Integration](https://github.com/kiranvshah/chatgpt-proxy-server/actions/workflows/continuous_integration.yaml/badge.svg)](https://github.com/kiranvshah/chatgpt-proxy-server/actions/workflows/continuous_integration.yaml)
+
 This README was written by ChatGPT.
 
 This repository contains the code to run a server that can host the ChatGPT API. The ChatGPT API allows you to send a query to ChatGPT and receive a response. It is useful in environments where Node 18.x cannot be used, such as when creating VS Code extensions. The API uses the [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) library.
