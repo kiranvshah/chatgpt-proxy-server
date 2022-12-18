@@ -49,9 +49,6 @@ To use this API, you will need to have an account with OpenAI and set the `OPENA
 ### Usage
 
 1. Create a '.env' file in the root directory of your project and set the `OPENAI_EMAIL` and `OPENAI_PASSWORD` environment variables.
-2. Run `pnpm install` to install the required dependencies.
-3. Start the server by running `pnpm start`.
-
-### Limitations
-
-ChatGPT requires captchas to be solved, so this cannot run fully automatically. If you have a [2captcha](https://2captcha.com/) account, you could add the parameter `captchaToken` to the `ChatGPTAPIBrowser` options, although the 2captcha API is not free.
+2. Generate a NopeCHA key [here](https://nopecha.com/manage) and paste it as the `NOPECHA_KEY` in '.env'.
+3. Run `pnpm install` to install the required dependencies.
+4. Start the server by running `pnpm start`.
