@@ -16,6 +16,9 @@ jobs:
       run:
         shell: bash
     steps:
+      - name: Set EOL character
+        run: git config --global core.eol lf && git config --global core.autocrlf false
+
       - name: Check out repo
         uses: actions/checkout@v3
 
@@ -33,7 +36,7 @@ jobs:
         run: pnpm install
 
       - name: Prettier Formatting Check
-        run: pnpm prettier:write && git diff
+        run: pnpm prettier:check
 
       - name: Build TypeScript Project
         run: pnpm build
