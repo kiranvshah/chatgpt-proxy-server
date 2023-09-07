@@ -1,5 +1,9 @@
 # ChatGPT Proxy Server
 
+> [!NOTE]
+> Archived in favour of the official ChatGPT API.
+
+
 [![Continuous Integration](https://github.com/kiranvshah/chatgpt-proxy-server/actions/workflows/continuous_integration.yaml/badge.svg)](https://github.com/kiranvshah/chatgpt-proxy-server/actions/workflows/continuous_integration.yaml)
 
 This README was written by ChatGPT.
